@@ -1,5 +1,9 @@
 var times = 0
 
+school_times = {}
+
+
+
 function add(id){
     let x = Number(document.getElementById(id).value)
     x += 1
@@ -15,6 +19,17 @@ function remove(id){
 }
 
 function add_time(){
+
+    x = document.getElementsByTagName('input')
+    for (i of x){
+        if (i.type === 'time'){
+            school_times [i.id] = i.value
+
+        }
+    }
+
+
+
     times += 1
     document.getElementById('neg').innerHTML = "<input type='button' id='remove-time' onclick='remove_time()' class='btn btn-danger' value='-'>" +
                                                         "<input type='button' id='add-time' onclick='add_time()' class='btn btn-primary' value='+'>"
@@ -42,16 +57,34 @@ function add_time(){
         "                      </div>"
 
 
+    for (i in school_times){
+        document.getElementById(i).value = school_times[i]
+    }
+
 
 }
 
 
 function remove_time(){
     let x;
+
+    y = document.getElementsByTagName('input')
+    for (i of y){
+        if (i.type === 'time'){
+            school_times [i.id] = i.value
+
+        }
+    }
+
     if ((times - 1) <= 0) {
         times -= 1
         document.getElementById('neg').innerHTML = "<input type='button' id='add-time' onclick='add_time()' class='btn btn-primary' value='+'>"
+
+        document.getElementById("classes-times").innerHTML = ''
     } else {
+
+
+
 
         x = document.getElementById("classes-times").innerHTML
 
@@ -77,14 +110,27 @@ function remove_time(){
             "                        </div>\n" +
             "                      </div>"
 
-        console.log(x)
         x = x.replace(del_text, '')
-
-        console.log(x)
-        console.log(del_text)
         document.getElementById("classes-times").innerHTML = x
         times -= 1
 
+
+
     }
+
+    delete school_times[-1]
+    if (school_times.length){
+        for (i in school_times){
+            document.getElementById(i).value = school_times[i]
+        }
+    }
+
+}
+
+
+function submit(){
+    // document.getElementById('school-schedule-time-1-start').value = '16:51'
+    console.log(school_times)
+
 }
 
