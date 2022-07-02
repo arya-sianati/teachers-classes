@@ -41,23 +41,45 @@
     <div class="mt-5">
             <h1 class="text-center">برنامه ریزی کلاسی</h1>
     </div>
-    <div>
 
-    </div>
     <div class="day-break mt-5">
         <h2>
             برنامه ی هفتگی
         </h2>
         <table class=" table table-bordered">
             <tr>
-                <th>روز / زنگ</th>
+                <th>زنگ / روز</th>
                 <th>
                     <button type="button" class="btn btn-primary rounded-pill m-1">روز جدید</button>
                 </th>
             </tr>
             <tr>
                 <th>
-                    <button type="button" class="btn btn-primary rounded-pill m-1">ساعت جدید</button>
+                    <button type="button" class="btn btn-primary rounded-pill m-1" data-bs-toggle="modal" data-bs-target="#day-break-break-Modal">زنگ جدید</button>
+
+                    <div class="modal fade" id="day-break-break-Modal" tabindex="-1" aria-labelledby="day-break-break-Modal-Label" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h5 class="modal-title" id="day-break-break-Modal-Label">زنگ جدید</h5>
+                          </div>
+                          <div dir="ltr" class="modal-body">
+                            <div class="input-group mb-3 mt-3 input-group-lg">
+                                <input type="time" class="form-control">
+                                <span class="input-group-text">از ساعت</span>
+                            </div>
+                            <div class="input-group mb-3 input-group-lg">
+                                <input type="time" class="form-control">
+                                <span class="input-group-text">تا ساعت</span>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-success w-100">ثبت</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                 </th>
             </tr>
         </table>
@@ -101,9 +123,6 @@
         </table>
     </div>
 
-
-
-
     <div class="teachers mt-5">
         <h2>
             دبیر ها
@@ -127,6 +146,7 @@
     </div>
 
 
+    <button type="button" class="btn btn-success rounded mt-5 mb-5 w-100 p-3"><h5>ساخت برنامه کلاسی</h5></button>
 
 
 </div>
