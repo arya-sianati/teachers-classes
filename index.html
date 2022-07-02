@@ -48,13 +48,42 @@
         </h2>
         <table class=" table table-bordered">
             <tr>
-                <th>زنگ / روز</th>
-                <th>
-                    <button type="button" class="btn btn-primary rounded-pill m-1">روز جدید</button>
+                <th id="day-break-r0-c0">زنگ / روز</th>
+                <th id="day-break-r0-c1">
+                    <button type="button" class="btn btn-primary rounded-pill m-1" data-bs-toggle="modal" data-bs-target="#day-break-day-Modal">روز جدید</button>
+
+                    <div class="modal fade" id="day-break-day-Modal" tabindex="-1" aria-labelledby="day-break-day-Modal-Label" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h5 class="modal-title" id="day-break-day-Modal-Label">روز جدید</h5>
+                          </div>
+                          <div class="modal-body">
+                            <div dir="ltr" class="input-group mb-3 mt-3 input-group-lg">
+                                <select id="day-break-day-value" dir="rtl" class="form-select form-select-lg" aria-label=".form-select-lg">
+                                  <option value="0">شنبه</option>
+                                  <option value="1">یک شنبه</option>
+                                  <option value="2">دو شنبه</option>
+                                  <option value="3">سه شنبه</option>
+                                  <option value="4">چهار شنبه</option>
+                                  <option value="5">پنج شنبه</option>
+                                  <option value="6">جمعه</option>
+                                </select>
+                                <span class="input-group-text">روز</span>
+                            </div>
+
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-success w-100">ثبت</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                 </th>
             </tr>
             <tr>
-                <th>
+                <th id="day-break-r1-c0">
                     <button type="button" class="btn btn-primary rounded-pill m-1" data-bs-toggle="modal" data-bs-target="#day-break-break-Modal">زنگ جدید</button>
 
                     <div class="modal fade" id="day-break-break-Modal" tabindex="-1" aria-labelledby="day-break-break-Modal-Label" aria-hidden="true">
@@ -66,11 +95,11 @@
                           </div>
                           <div dir="ltr" class="modal-body">
                             <div class="input-group mb-3 mt-3 input-group-lg">
-                                <input type="time" class="form-control">
+                                <input id="day-break-break-start-value" type="time" class="form-control">
                                 <span class="input-group-text">از ساعت</span>
                             </div>
                             <div class="input-group mb-3 input-group-lg">
-                                <input type="time" class="form-control">
+                                <input id="day-break-break-end-value" type="time" class="form-control">
                                 <span class="input-group-text">تا ساعت</span>
                             </div>
                           </div>
@@ -85,60 +114,172 @@
         </table>
     </div>
 
-    <div class="grade-major mt-5">
+    <div class="major-grade mt-5">
         <h2>
             درس ها
         </h2>
         <table class="table table-bordered">
             <tr>
-                <th>پایه / رشته</th>
-                <th>
-                    <button type="button" class="btn btn-primary rounded-pill m-1">رشته ی جدید</button>
+                <th id="major-grade-r0-c0">پایه / رشته</th>
+                <th id="major-grade-r0-c1">
+                    <button type="button" class="btn btn-primary rounded-pill m-1" data-bs-toggle="modal" data-bs-target="#major-grade-major-Modal">رشته ی جدید</button>
+
+                    <div class="modal fade" id="major-grade-major-Modal" tabindex="-1" aria-labelledby="major-grade-major-Modal-Label" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h5 class="modal-title" id="major-grade-major-Modal-Label">زنگ جدید</h5>
+                          </div>
+                          <div dir="ltr" class="modal-body">
+                            <div dir="ltr" class="input-group input-group-lg">
+                                <select id="major-grade-major-value" dir="rtl" class="form-select form-select-lg" aria-label=".form-select-lg">
+                                  <option value="elementary-school">ابتدایی</option>
+                                  <option value="middle-school">راهنمایی</option>
+                                  <option value="high-school-math">ریاضی فیزیک</option>
+                                  <option value="high-school-science">علوم تجربی</option>
+                                  <option value="high-school-humanities">علوم انسانی</option>
+                                </select>
+                                <span class="input-group-text">رشته</span>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-success w-100">ثبت</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                 </th>
             </tr>
             <tr>
-                <th>
-                    <button type="button" class="btn btn-primary rounded-pill m-1">پایه ی جدید</button>
+                <th id="major-grade-r1-c0">
+                    <button type="button" class="btn btn-primary rounded-pill m-1" data-bs-toggle="modal" data-bs-target="#major-grade-grade-Modal">پایه جدید</button>
+
+                    <div class="modal fade" id="major-grade-grade-Modal" tabindex="-1" aria-labelledby="major-grade-grade-Modal-Label" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h5 class="modal-title" id="major-grade-grade-Modal-Label">پایه جدید</h5>
+                          </div>
+                          <div dir="ltr" class="modal-body">
+                            <div dir="ltr" class="input-group input-group-lg">
+                                <select id="major-grade-grade-value" dir="rtl" class="form-select form-select-lg" aria-label=".form-select-lg">
+                                  <option value="1">اول</option>
+                                  <option value="2">دوم</option>
+                                  <option value="3">سوم</option>
+                                  <option value="4">چهارم</option>
+                                  <option value="5">پنجم</option>
+                                  <option value="6">ششم</option>
+                                  <option value="7">هفتم</option>
+                                  <option value="8">هشتم</option>
+                                  <option value="9">نهم</option>
+                                  <option selected value="10">دهم</option>
+                                  <option value="11">یازدهم</option>
+                                  <option value="12">دوازدهم</option>
+                                </select>
+                                <span class="input-group-text">پایه</span>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-success w-100">ثبت</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                 </th>
             </tr>
         </table>
     </div>
 
-    <div class="class-major mt-5">
+    <div class="major-class mt-5">
         <h2>
             کلاس ها
         </h2>
         <table class="table table-bordered">
             <tr>
-                <th>پایه / رشته</th>
-                <th>
-                    <button type="button" class="btn btn-primary rounded-pill m-1">رشته ی جدید</button>
+                <th id="major-class-r0-c0">پایه / رشته</th>
+                <th id="major-class-r0-c1">
+                    <button type="button" class="btn btn-primary rounded-pill m-1" data-bs-toggle="modal" data-bs-target="#major-class-major-Modal">رشته ی جدید</button>
+
+                    <div class="modal fade" id="major-class-major-Modal" tabindex="-1" aria-labelledby="major-class-major-Modal-Label" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h5 class="modal-title" id="major-class-major-Modal-Label">زنگ جدید</h5>
+                          </div>
+                          <div dir="ltr" class="modal-body">
+                            <div dir="ltr" class="input-group input-group-lg">
+                                <select id="major-class-major-value" dir="rtl" class="form-select form-select-lg" aria-label=".form-select-lg">
+                                  <option value="elementary-school">ابتدایی</option>
+                                  <option value="middle-school">راهنمایی</option>
+                                  <option value="high-school-math">ریاضی فیزیک</option>
+                                  <option value="high-school-science">علوم تجربی</option>
+                                  <option value="high-school-humanities">علوم انسانی</option>
+                                </select>
+                                <span class="input-group-text">رشته</span>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-success w-100">ثبت</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                 </th>
             </tr>
             <tr>
-                <th>
-                    <button type="button" class="btn btn-primary rounded-pill m-1">پایه ی جدید</button>
+                <th id="major-class-r1-c0">
+                    <button type="button" class="btn btn-primary rounded-pill m-1" data-bs-toggle="modal" data-bs-target="#major-class-class-Modal">پایه جدید</button>
+
+                    <div class="modal fade" id="major-class-class-Modal" tabindex="-1" aria-labelledby="major-class-class-Modal-Label" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h5 class="modal-title" id="major-class-class-Modal-Label">پایه جدید</h5>
+                          </div>
+                          <div dir="ltr" class="modal-body">
+                              <div dir="ltr" class="input-group input-group-lg">
+                                <select id="major-class-class-value" dir="rtl" class="form-select form-select-lg" aria-label=".form-select-lg">
+                                  <option value="1">اول</option>
+                                  <option value="2">دوم</option>
+                                  <option value="3">سوم</option>
+                                  <option value="4">چهارم</option>
+                                  <option value="5">پنجم</option>
+                                  <option value="6">ششم</option>
+                                  <option value="7">هفتم</option>
+                                  <option value="8">هشتم</option>
+                                  <option value="9">نهم</option>
+                                  <option selected value="10">دهم</option>
+                                  <option value="11">یازدهم</option>
+                                  <option value="12">دوازدهم</option>
+                                </select>
+                                <span class="input-group-text">پایه</span>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-success w-100">ثبت</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                 </th>
             </tr>
         </table>
     </div>
 
     <div class="teachers mt-5">
-        <h2>
-            دبیر ها
-        </h2>
+        <h2>دبیر ها</h2>
         <table class="table table-bordered">
             <tr>
-                <th>پایه / رشته</th>
-                <th>
-                    زنگ های قابل تدریس
-                </th>
-                <th>
-                    درس های قابل تدریس
-                </th>
+                <th id="teachers-r0-c0">پایه / رشته</th>
+                <th id="teachers-r0-c1">زنگ های قابل تدریس</th>
+                <th id="teachers-r0-c2">درس های قابل تدریس</th>
             </tr>
             <tr>
-                <th>
+                <th id="teachers-r1-c0">
                     <button type="button" class="btn btn-primary rounded-pill m-1">معلم جدید</button>
                 </th>
             </tr>
@@ -146,7 +287,7 @@
     </div>
 
 
-    <button type="button" class="btn btn-success rounded mt-5 mb-5 w-100 p-3"><h5>ساخت برنامه کلاسی</h5></button>
+    <button type="button" class="btn btn-success rounded rounded-pill mt-5 mb-5 w-100 p-3 fs-5">ساخت برنامه کلاسی</button>
 
 
 </div>
